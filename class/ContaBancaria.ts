@@ -43,6 +43,9 @@ export abstract class ContaBancaria {
   desativarConta() {
     this.status = false;
   }
+  ativarConta() {
+    this.status = true;
+  }
 
   protected contaAtiva(): boolean {
     const status = this.getStatus();
@@ -62,7 +65,7 @@ export abstract class ContaBancaria {
       return false;
     }
   }
-  protected getSaldo(): number {
+  getSaldo(): number {
     return this.saldo;
   }
   protected getStatus(): boolean {
